@@ -12,6 +12,16 @@ int substract(int a, int b)
   return c;
 }
 
+int recursionsum(int n)
+{
+  if(n !=0 )
+  {
+    return n += recursionsum(n - 1);
+  }
+  else  
+    return n;
+}
+
 int main()
 {
   int a = 5;
@@ -103,7 +113,8 @@ int main()
     printf("Goto executed,,,sum: %d\n", i);
     
     summation(12, 18);
-    printf("%d", substract(18, 12));
+    printf("%d\n", substract(18, 12));
 
+    printf("%d\n", recursionsum(5));
     return 0;
 }
