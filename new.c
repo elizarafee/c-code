@@ -59,21 +59,36 @@ int main()
     switch (op)
     {
       case '*':
-      printf("%d * %d = %d", k, l, k*l);
+      printf("%d * %d = %d\n", k, l, k*l);
       break;
 
       case '-':
-      printf("%d - %d = %d", k, l, k-l);
+      printf("%d - %d = %d\n", k, l, k-l);
       break;
 
       case '+':
-      printf("%d - %d = %d", k, l, k+l);
+      printf("%d - %d = %d\n", k, l, k+l);
       break;
 
       default:
       printf("Error! operator is not correct");
       break;    
     }
-   
+
+    int sum = 0;
+
+    for (int i = 0; i < 4; i++)
+    {
+      sum += i;
+      if (i==3)
+      {
+        goto work;
+      }
+    }
+
+    work:
+    printf("Goto executed,,,sum: %d\n", i);
+    
+
     return 0;
 }
