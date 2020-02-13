@@ -1,4 +1,17 @@
 #include<stdio.h>
+
+void summation(int a, int b)
+{
+  int c = a + b;
+  printf("%d\n", c);
+}
+
+int substract(int a, int b)
+{
+  int c = a-b;
+  return c;
+}
+
 int main()
 {
   int a = 5;
@@ -89,6 +102,8 @@ int main()
     work:
     printf("Goto executed,,,sum: %d\n", i);
     
+    summation(12, 18);
+    printf("%d", substract(18, 12));
 
     return 0;
 }
