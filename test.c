@@ -1,4 +1,33 @@
 #include <stdio.h>
+
+
+int primenums(int a)
+{
+    int flag = 1;
+    
+    for (int i = 2; i < a / 2; i++)
+    {
+        if (a % i == 0)
+        {
+            flag = 0;
+            break;
+        }
+    }
+    return flag;
+}
+
+void matrixsum(int addd[2][3])
+{
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("%d ",addd[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     int flag;
@@ -13,19 +42,34 @@ int main()
             printf("%d ", i);
         }
     }
-    return 0;
-}
+    printf("\n");
 
-int primenums(int a)
-{
-    int flag = 1;
-    for (int i = 2; i < a / 2; i++)
+    int c[2][3], d[2][3], addd[2][3];
+    for (int i = 0; i < 2; i++)
     {
-        if (a % i == 0)
+        for (int j = 0; j < 3; j++)
         {
-            flag = 0;
-            break;
+            scanf("%d", &c[i][j]);
         }
     }
-    return flag;
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &d[i][j]);
+        }
+    }
+    
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            addd[i][j] = c[i][j] + d[i][j];
+        }
+    }
+    
+    matrixsum(addd);
+    
+    return 0;
 }
