@@ -18,8 +18,24 @@ int main()
      printf("Is equal to 5");
    }
    
-
    
+   for (int i = 0; i < 5; i++)
+   {
+     printf("for loop: %d\n", i);
+   }
+
+   int i = 0;
+   while (i<3)
+   {
+     printf("While loop: %d\n", i);
+     i++;
+   }
+   
+   do
+   {
+     printf("Do-While loop - mendatory printing");
+   } while (i>3);
+
    
    
     return 0;
