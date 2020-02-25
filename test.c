@@ -70,6 +70,9 @@ int main()
     }
     
     matrixsum(addd);
+
+    int i=20;
+    printf("%p", &i);
     
     return 0;
 }
